@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.example.android.alcquiz.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/questionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="Where is the Capital of Nigeria?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonOptionA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oyo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOptionB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lagos" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOptionC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Port Harcourt" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOptionD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abuja" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="You got 3 out of 5 questions"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnStartQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionView"
+        android:layout_centerHorizontal="true"
+        android:text="START QUIZ" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartQuiz"
+        android:layout_centerHorizontal="true"
+        android:text="NEXT"
+        android:visibility="gone" />
+</RelativeLayout>
